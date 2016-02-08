@@ -1,3 +1,10 @@
+##################### Upgrade/Update #####################
+	
+	execute 'upgrade_command' do
+		command 'apt-get update'
+		command 'apt-get upgrade -y'
+	end
+
 ##################### Package Installation Seciont #######################
 
 apt_package ['nginx','php5-fpm','php5-xmlrpc','php5-mysql','php5-mcrypt','php5-intl','php5-gd','php5-dev','php5-curl','php5-common','php5-cli','php5-cgi','php-pear','build-essential','php-apc','php5-imap','unzip']
@@ -11,11 +18,6 @@ apt_package ['nginx','php5-fpm','php5-xmlrpc','php5-mysql','php5-mcrypt','php5-i
                 command 'pip install awscli'
         end
 
-##################### Upgrade/Update #####################
-	
-	execute 'upgrade_command' do
-		command 'apt-get update && apt-get upgrade -y'
-	end
 
 ##################### Service Restart Section ############################
 #Certain services are going to need to be restarted
