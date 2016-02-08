@@ -5,7 +5,7 @@ apt_package ['nginx','php5-fpm','php5-xmlrpc','php5-mysql','php5-mcrypt','php5-i
 
 ##################### AWSCLI Install #####################
  
-        execute 'sawscli_install' do
+        execute 'awscli_install' do
                 command 'curl-O https://bootstrap.pypa.io/get-pip.py'
                 command 'python get-pip.py'
                 command 'pip install awscli'
