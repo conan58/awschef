@@ -11,6 +11,11 @@ apt_package ['nginx','php5-fpm','php5-xmlrpc','php5-mysql','php5-mcrypt','php5-i
                 command 'pip install awscli'
         end
 
+##################### Upgrade/Update #####################
+	
+	execute 'upgrade_command' do
+		command 'apt-get update && apt-get upgrade -y'
+	end
 
 ##################### Service Restart Section ############################
 #Certain services are going to need to be restarted
